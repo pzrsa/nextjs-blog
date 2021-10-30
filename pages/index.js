@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
-import Date from "../components/date";
-import Layout, { siteTitle } from "../components/layout";
+import Date from "../components/Date";
+import Layout, { siteTitle } from "../components/Layout";
 import NowPlaying from "../components/NowPlaying";
 import { getSortedPostsData } from "../lib/posts";
 import utilStyles from "../styles/utils.module.css";
@@ -15,7 +15,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const Home = ({ allPostsData, songData }) => {
+const Home = ({ allPostsData }) => {
   return (
     <Layout home>
       <Head>
@@ -24,8 +24,7 @@ const Home = ({ allPostsData, songData }) => {
       <section className={utilStyles.headingMd}>
         <p>👋 Hi, I'm Parsa.</p>
         <p>
-          (This is a sample website - you’ll be building a site like this on{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          just a place where i play around with nextjs. having a lot of fun!
         </p>
       </section>
       <NowPlaying />

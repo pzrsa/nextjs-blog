@@ -4,7 +4,7 @@ import Link from "next/link";
 import utilStyles from "../styles/utils.module.css";
 import styles from "./layout.module.css";
 
-const name = "Parsa";
+const name = "parsa.";
 export const siteTitle = "Next.js Sample Website";
 
 const Layout = ({ children, home }) => {
