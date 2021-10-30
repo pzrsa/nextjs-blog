@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import utilStyles from "../styles/utils.module.css";
-import styles from "./layout.module.css";
+import styles from "./Layout.module.css";
 
 const name = "parsa.";
 export const siteTitle = "Next.js Sample Website";
