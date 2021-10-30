@@ -1,10 +1,10 @@
 import { getNowPlaying } from "../../lib/spotify";
 
-const responseHandler = async (_, res) => {
+const handler = async (_, res) => {
   const response = await getNowPlaying();
 
   if (response.status === 204 || response.status > 400) {
-    return { isPlaying: false };
+    return res.status(200).json({ isPlaying: false });
   }
 
   const song = await response.json();
@@ -15,14 +15,14 @@ const responseHandler = async (_, res) => {
   const albumImageUrl = song.item.album.images[0].url;
   const songUrl = song.item.external_urls.spotify;
 
-  return {
+  return res.status(200).json({
     album,
     albumImageUrl,
     artist,
     isPlaying,
     songUrl,
     title,
-  };
+  });
 };
 
-export default responseHandler;
+export default handler;
