@@ -3,6 +3,7 @@ import Link from "next/link";
 import Date from "../components/Date";
 import Layout, { siteTitle } from "../components/Layout";
 import NowPlaying from "../components/NowPlaying";
+import ThemeChanger from "../components/ThemeChanger";
 import { getSortedPostsData } from "../lib/posts";
 import utilStyles from "../styles/utils.module.css";
 
@@ -27,6 +28,7 @@ const Home = ({ allPostsData }) => {
           just a place where i play around with nextjs. having a lot of fun!
         </p>
       </section>
+      <ThemeChanger />
       <NowPlaying />
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
