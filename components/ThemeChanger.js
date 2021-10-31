@@ -1,5 +1,6 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
 const ThemeChanger = () => {
   const [mounted, setMounted] = useState(false);
@@ -13,11 +14,14 @@ const ThemeChanger = () => {
 
   return (
     <div>
-      The current theme is: {resolvedTheme}
       <button
         onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       >
-        Toggle theme
+        {resolvedTheme === "dark" ? (
+          <MdOutlineLightMode />
+        ) : (
+          <MdOutlineDarkMode />
+        )}
       </button>
     </div>
   );
