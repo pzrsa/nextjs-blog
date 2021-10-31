@@ -15,7 +15,7 @@ const NowPlaying = () => {
   return (
     <>
       {data?.isPlaying ? (
-        <>
+        <div>
           <Image
             priority
             src={data.albumImageUrl}
@@ -31,7 +31,7 @@ const NowPlaying = () => {
               {data.title} by {data.artist}
             </a>
           </p>
-        </>
+        </div>
       ) : (
         <p>not playing on Spotify right now</p>
       )}
