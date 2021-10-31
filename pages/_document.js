@@ -6,10 +6,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="icon" href="/favicon.ico" />
-          <meta
-            name="description"
-            content="Learn how to build a personal website using Next.js"
-          />
+          <meta name="description" content="parsa's nextjs playground" />
         </Head>
         <body>
           <Main />

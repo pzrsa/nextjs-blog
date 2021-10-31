@@ -5,7 +5,7 @@ import utilStyles from "../styles/utils.module.css";
 import styles from "./Layout.module.css";
 
 const name = "parsa.";
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "parsa's nextjs playground";
 
 const Layout = ({ children, home }) => {
   return (
